@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("Задание 2д: не (А и не В или С) и В");
+            Console.Write("Введите A (true/false): ");
+            bool A = bool.Parse(Console.ReadLine());
+            Console.Write("Введите B (true/false): ");
+            bool B = bool.Parse(Console.ReadLine());
+            Console.Write("Введите C (true/false): ");
+            bool C = bool.Parse(Console.ReadLine());
+
+            bool result = !(A && !B || C) && B;
+            Console.WriteLine($"не ({A} и не {B} или {C}) и {B} = {result}");
+        }
+
+
+    }
+}
